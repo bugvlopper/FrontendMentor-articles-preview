@@ -21,7 +21,6 @@ body{
 }
 .drawer img{
   height: 100%;
-
 }
 .content{
   width: 100%;
@@ -62,7 +61,7 @@ h2{
   position: absolute;
   bottom: 60px;
   left: 222px;
-  display: none; /* should be pass to flex when active */
+  display: none; 
   background-color: hsl(217, 19%, 35%);
   border-radius: 15px;
   justify-content: space-around;
@@ -106,7 +105,6 @@ h2{
 .shareButton.active svg path{
   fill: white;
 }
-
 @media only screen and (max-width: 760px){
   .card{
     flex-direction: column;
@@ -149,7 +147,6 @@ h2{
     height: 70px;
     border-radius: 0 0 15px 15px;
     padding-right: 120px;
-
   }
   .share::after{
     display: none;

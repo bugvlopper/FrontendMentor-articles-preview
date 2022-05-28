@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/bugvlopper/FrontendMentor-articles-preview.git](https://github.com/bugvlopper/FrontendMentor-articles-preview.git)
-- Live Site URL: [https://bugvlopper.github.io/FrontendMentor-articles-preview.git](https://bugvlopper.github.io/FrontendMentor-articles-preview.git)
+- Live Site URL: [https://bugvlopper.github.io/FrontendMentor-articles-preview](https://bugvlopper.github.io/FrontendMentor-articles-preview)
 
 ## My process
 

@@ -7,7 +7,6 @@ import avatar from "./images/avatar-michelle.jpg";
 import { Component } from 'react';
 
 class App extends Component {
-  state = {  } 
 
   _toggleShare(params){
     let target = params.target;
