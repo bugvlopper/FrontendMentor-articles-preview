@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(210, 46%, 95%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  width: 730px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 280px;
+  border-radius: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.drawer{
+  width: 70%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 15px 0 0 15px;
 }
+.drawer img{
+  height: 100%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.content{
+  width: 100%;
+  padding: 35px 41px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.content p{
+  color: hsl(214, 17%, 51%);
+}
+h1{
+  font-size: 1.2rem;
+  color: hsl(217, 19%, 35%);
+}
+h2{
+  color: hsl(217, 19%, 35%);
+  font-size: 1rem;
+}
+.bottom-content{
+  position: relative;
+  display: flex;
+  width: 363px;
+  max-height: 40px;
+  justify-content: space-between;
   align-items: center;
+}
+.avatar{
+  display: flex;
+  width: 196px;
+}
+.avatar img{
+  width: 40px;
+  border-radius: 50px;
+  margin-right: 1rem;
+}
+.share{
+  position: absolute;
+  bottom: 60px;
+  left: 222px;
+  display: none; /* should be pass to flex when active */
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 15px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  width: 250px;
+  height: 55px;
+}
+.share p {
+  color: hsla(212, 23%, 69%, 1);
+}
+.share::after{
+  content: '';
+  background-color: hsl(217, 19%, 35%);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 45px;
+  transform: rotateZ(45deg);
+}
+.share.active{
+  display: flex;
+}
+.shareButton{
+  background-color: hsla(212, 23%, 69%, 0.2);
+  width: 32px;
+  height: 32px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50px;
+}
+.shareButton svg{
+  margin-bottom: 3px;
+}
+.shareButton.active{
+  background-color: hsl(217, 19%, 35%);
+}
+.shareButton.active svg path{
+  fill: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 760px){
+  .card{
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 330px;
+    height: 515px;
   }
-  to {
-    transform: rotate(360deg);
+  .drawer{
+    width: 330px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+  }
+  .drawer img{
+    width: 100%;
+    height: auto;
+  }
+  h1{
+    font-size: 1rem;
+  }
+  h2{
+    font-size: .8rem;
+  }
+  .bottom-content{
+    width: auto;
+  }
+  .content{
+    padding-top: 40px;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+    height: 315px;
+  }
+  .share.active{
+    bottom: -20px;
+    left: -32px;
+    width: 330px;
+    height: 70px;
+    border-radius: 0 0 15px 15px;
+    padding-right: 120px;
+
+  }
+  .share::after{
+    display: none;
+  }
+  .shareButton.active{
+    z-index: 1;
+    position: relative;
+    top: 5px;
+    background-color: hsla(212, 23%, 69%, 0.8);
   }
 }
